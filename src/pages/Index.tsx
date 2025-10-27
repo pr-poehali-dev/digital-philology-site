@@ -60,7 +60,7 @@ const Index = () => {
               <div className="flex gap-4">
                 <Button 
                   onClick={() => scrollToSection('admission')}
-                  className="bg-philology-purple hover:bg-philology-darkPurple text-white px-8 py-6 text-lg"
+                  className="border-2 border-philology-purple text-white bg-philology-purple/80 hover:bg-philology-purple hover:border-philology-darkPurple px-8 py-6 text-lg font-semibold shadow-lg"
                 >
                   Поступить
                 </Button>
