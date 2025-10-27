@@ -33,8 +33,10 @@ const Index = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-sm font-medium transition-colors hover:text-philology-cyan ${
-                    activeSection === item.id ? 'text-philology-cyan' : 'text-white/80'
+                  className={`text-base font-semibold transition-all duration-200 ${
+                    activeSection === item.id 
+                      ? 'text-philology-cyan drop-shadow-[0_0_8px_rgba(144,221,240,0.6)]' 
+                      : 'text-white hover:text-philology-cyan'
                   }`}
                 >
                   {item.label}
