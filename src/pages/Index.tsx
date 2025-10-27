@@ -162,10 +162,10 @@ const Index = () => {
                 image: 'https://cdn.poehali.dev/files/6c8792a2-27fc-4d24-8d65-e85660bd0830.jpg'
               },
               {
-                name: 'Доц. Анна Иванова',
-                position: 'Руководитель программы',
-                specialization: 'NLP, машинное обучение для текстов',
-                image: '/placeholder.svg'
+                name: 'Софронова Елена Анатольевна',
+                position: 'Заведующий кафедрой прикладной информатики и интеллектуальных систем в гуманитарной сфере, кандидат технических наук, доцент',
+                specialization: 'Прикладная информатика и интеллектуальные системы в гуманитарной сфере',
+                image: 'https://cdn.poehali.dev/files/0facb39f-ea97-400c-9231-371b7d2b82cc.jpg'
               }
             ].map((teacher, index) => (
               <Card 
