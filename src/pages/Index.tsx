@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -7,12 +7,32 @@ import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const [isVisible, setIsVisible] = useState<{[key: string]: boolean}>({});
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsVisible(prev => ({
+            ...prev,
+            [entry.target.id]: entry.isIntersecting
+          }));
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const sections = document.querySelectorAll('section[id]');
+    sections.forEach((section) => observer.observe(section));
+
+    return () => sections.forEach((section) => observer.unobserve(section));
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-philology-midnight via-philology-darkPurple via-30% to-philology-navy to-70% relative overflow-hidden">
@@ -52,7 +72,7 @@ const Index = () => {
         </div>
       </nav>
 
-      <section id="home" className="pt-32 pb-20 px-6 relative">
+      <section id="home" className="min-h-screen flex items-center pt-20 pb-12 px-4 md:px-6 relative">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
@@ -91,7 +111,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="program" className="py-20 px-6 relative">
+      <section id="program" className="min-h-screen flex items-center py-12 px-4 md:px-6 relative transition-all duration-700 ${isVisible['program'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}">
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-center text-white mb-4">Программа обучения</h2>
           <p className="text-center text-philology-cyan/80 mb-12 text-lg">
@@ -120,12 +140,12 @@ const Index = () => {
             ].map((module, index) => (
               <Card 
                 key={index} 
-                className="bg-white/10 backdrop-blur-md border-philology-purple/30 hover:border-philology-cyan/50 transition-all duration-300 hover:scale-105 animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group bg-white/10 backdrop-blur-md border-philology-purple/30 hover:border-philology-cyan/50 transition-all duration-500 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-philology-cyan/20 animate-slide-in"
+                style={{ animationDelay: `${index * 0.15}s` }}
               >
                 <CardHeader>
-                  <div className="w-12 h-12 bg-philology-purple/20 rounded-lg flex items-center justify-center mb-4">
-                    <Icon name={module.icon} className="text-philology-cyan" size={24} />
+                  <div className="w-12 h-12 bg-philology-purple/20 rounded-lg flex items-center justify-center mb-4 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+                    <Icon name={module.icon} className="text-philology-cyan transition-colors duration-300" size={24} />
                   </div>
                   <CardTitle className="text-white text-xl">{module.title}</CardTitle>
                   <CardDescription className="text-philology-cyan/80">
@@ -148,7 +168,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="teachers" className="py-20 px-6 relative">
+      <section id="teachers" className="min-h-screen flex items-center py-12 px-4 md:px-6 relative transition-all duration-700 ${isVisible['teachers'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}">
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-center text-white mb-4">Наши преподаватели</h2>
           <p className="text-center text-philology-cyan/80 mb-12 text-lg">
@@ -198,7 +218,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="admission" className="py-20 px-6 relative">
+      <section id="admission" className="min-h-screen flex items-center py-12 px-4 md:px-6 relative transition-all duration-700 ${isVisible['admission'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl font-bold text-center text-white mb-4">Поступление</h2>
           <p className="text-center text-philology-cyan/80 mb-12 text-lg">
@@ -265,7 +285,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="video" className="py-20 px-6 relative">
+      <section id="video" className="min-h-screen flex items-center py-12 px-4 md:px-6 relative transition-all duration-700 ${isVisible['video'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-4xl font-bold text-center text-white mb-4">О направлении</h2>
           <p className="text-center text-philology-cyan/80 mb-12 text-lg">
@@ -324,7 +344,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-20 px-6 relative">
+      <section id="contacts" className="min-h-screen flex items-center py-12 px-4 md:px-6 relative transition-all duration-700 ${isVisible['contacts'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl font-bold text-center text-white mb-4">Контакты</h2>
           <p className="text-center text-philology-cyan/80 mb-12 text-lg">
