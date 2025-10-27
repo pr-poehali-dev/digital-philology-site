@@ -67,7 +67,7 @@ const Index = () => {
                 <Button 
                   onClick={() => scrollToSection('program')}
                   variant="outline"
-                  className="border-philology-cyan text-philology-cyan hover:bg-philology-cyan hover:text-philology-midnight px-8 py-6 text-lg"
+                  className="border-2 border-philology-cyan text-white bg-philology-cyan/20 hover:bg-philology-cyan hover:text-philology-midnight px-8 py-6 text-lg font-semibold shadow-lg"
                 >
                   Программа
                 </Button>
