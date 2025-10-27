@@ -156,10 +156,10 @@ const Index = () => {
                 image: 'https://cdn.poehali.dev/files/c39ef76f-a96e-4cd3-869c-3866313dea11.jpg'
               },
               {
-                name: 'Доц. Михаил Петров',
-                position: 'Декан факультета',
-                specialization: 'Цифровые издания, текстология',
-                image: '/placeholder.svg'
+                name: 'Алексей Юрьевич Овчаренко',
+                position: 'Профессор кафедры русского языка и лингвокультурологии, доктор филологических наук, доцент',
+                specialization: 'Русский язык и лингвокультурология',
+                image: 'https://cdn.poehali.dev/files/6c8792a2-27fc-4d24-8d65-e85660bd0830.jpg'
               },
               {
                 name: 'Доц. Анна Иванова',
