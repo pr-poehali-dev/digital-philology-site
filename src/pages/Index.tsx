@@ -21,7 +21,7 @@ const Index = () => {
         <div className="absolute top-60 right-20 w-96 h-96 bg-philology-cyan rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
         <div className="absolute bottom-40 left-1/3 w-96 h-96 bg-philology-navy rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{animationDelay: '4s'}}></div>
       </div>
-      <nav className="fixed top-0 w-full bg-philology-midnight/80 backdrop-blur-md z-50 border-b border-philology-purple/20 relative">
+      <nav className="fixed top-0 left-0 right-0 w-full bg-philology-midnight/95 backdrop-blur-lg z-50 border-b border-philology-purple/30 shadow-xl">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-bold text-white">
