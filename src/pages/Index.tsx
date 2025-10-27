@@ -150,10 +150,10 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                name: 'Проф. Елена Смирнова',
-                position: 'Заведующая кафедрой',
-                specialization: 'Компьютерная лингвистика, корпусные исследования',
-                image: '/placeholder.svg'
+                name: 'Марина Александровна Брагина',
+                position: 'Заместитель директора по учебной работе, кандидат филологических наук, доцент',
+                specialization: 'Методика преподавания Русского языка',
+                image: 'https://cdn.poehali.dev/files/c39ef76f-a96e-4cd3-869c-3866313dea11.jpg'
               },
               {
                 name: 'Доц. Михаил Петров',
