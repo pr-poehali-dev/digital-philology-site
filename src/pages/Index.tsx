@@ -111,7 +111,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="program" className="min-h-screen flex items-center py-12 px-4 md:px-6 relative transition-all duration-700 ${isVisible['program'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}">
+      <section id="program" className={`min-h-screen flex items-center py-12 px-4 md:px-6 relative transition-all duration-700 ${isVisible['program'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-center text-white mb-4">Программа обучения</h2>
           <p className="text-center text-philology-cyan/80 mb-12 text-lg">
@@ -168,7 +168,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="teachers" className="min-h-screen flex items-center py-12 px-4 md:px-6 relative transition-all duration-700 ${isVisible['teachers'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}">
+      <section id="teachers" className={`min-h-screen flex items-center py-12 px-4 md:px-6 relative transition-all duration-700 ${isVisible['teachers'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-center text-white mb-4">Наши преподаватели</h2>
           <p className="text-center text-philology-cyan/80 mb-12 text-lg">
@@ -218,7 +218,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="admission" className="min-h-screen flex items-center py-12 px-4 md:px-6 relative transition-all duration-700 ${isVisible['admission'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}">
+      <section id="admission" className={`min-h-screen flex items-center py-12 px-4 md:px-6 relative transition-all duration-700 ${isVisible['admission'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl font-bold text-center text-white mb-4">Поступление</h2>
           <p className="text-center text-philology-cyan/80 mb-12 text-lg">
@@ -285,7 +285,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="video" className="min-h-screen flex items-center py-12 px-4 md:px-6 relative transition-all duration-700 ${isVisible['video'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}">
+      <section id="video" className={`min-h-screen flex items-center py-12 px-4 md:px-6 relative transition-all duration-700 ${isVisible['video'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-4xl font-bold text-center text-white mb-4">О направлении</h2>
           <p className="text-center text-philology-cyan/80 mb-12 text-lg">
@@ -344,7 +344,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contacts" className="min-h-screen flex items-center py-12 px-4 md:px-6 relative transition-all duration-700 ${isVisible['contacts'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}">
+      <section id="contacts" className={`min-h-screen flex items-center py-12 px-4 md:px-6 relative transition-all duration-700 ${isVisible['contacts'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl font-bold text-center text-white mb-4">Контакты</h2>
           <p className="text-center text-philology-cyan/80 mb-12 text-lg">
