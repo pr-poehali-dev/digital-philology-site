@@ -15,8 +15,13 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-philology-midnight via-philology-darkPurple to-philology-navy">
-      <nav className="fixed top-0 w-full bg-philology-midnight/90 backdrop-blur-md z-50 border-b border-philology-purple/20">
+    <div className="min-h-screen bg-gradient-to-br from-philology-midnight via-philology-darkPurple via-30% to-philology-navy to-70% relative overflow-hidden">
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-20 left-10 w-96 h-96 bg-philology-purple rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        <div className="absolute top-60 right-20 w-96 h-96 bg-philology-cyan rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-40 left-1/3 w-96 h-96 bg-philology-navy rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{animationDelay: '4s'}}></div>
+      </div>
+      <nav className="fixed top-0 w-full bg-philology-midnight/80 backdrop-blur-md z-50 border-b border-philology-purple/20 relative">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-bold text-white">
@@ -47,7 +52,7 @@ const Index = () => {
         </div>
       </nav>
 
-      <section id="home" className="pt-32 pb-20 px-6">
+      <section id="home" className="pt-32 pb-20 px-6 relative">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
@@ -86,7 +91,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="program" className="py-20 px-6 bg-white/5 backdrop-blur-sm">
+      <section id="program" className="py-20 px-6 relative">
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-center text-white mb-4">Программа обучения</h2>
           <p className="text-center text-philology-cyan/80 mb-12 text-lg">
@@ -143,7 +148,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="teachers" className="py-20 px-6">
+      <section id="teachers" className="py-20 px-6 relative">
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-center text-white mb-4">Наши преподаватели</h2>
           <p className="text-center text-philology-cyan/80 mb-12 text-lg">
@@ -193,7 +198,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="admission" className="py-20 px-6 bg-white/5 backdrop-blur-sm">
+      <section id="admission" className="py-20 px-6 relative">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl font-bold text-center text-white mb-4">Поступление</h2>
           <p className="text-center text-philology-cyan/80 mb-12 text-lg">
@@ -260,7 +265,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="video" className="py-20 px-6">
+      <section id="video" className="py-20 px-6 relative">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-4xl font-bold text-center text-white mb-4">О направлении</h2>
           <p className="text-center text-philology-cyan/80 mb-12 text-lg">
@@ -319,7 +324,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-20 px-6 bg-white/5 backdrop-blur-sm">
+      <section id="contacts" className="py-20 px-6 relative">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl font-bold text-center text-white mb-4">Контакты</h2>
           <p className="text-center text-philology-cyan/80 mb-12 text-lg">
