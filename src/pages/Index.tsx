@@ -260,7 +260,66 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-20 px-6">
+      <section id="video" className="py-20 px-6">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-4xl font-bold text-center text-white mb-4">О направлении</h2>
+          <p className="text-center text-philology-cyan/80 mb-12 text-lg">
+            Узнайте больше о прикладной цифровой филологии из видео-рассказа
+          </p>
+          <Card className="bg-white/10 backdrop-blur-md border-philology-purple/30 overflow-hidden">
+            <CardContent className="p-0">
+              <div className="relative aspect-video bg-gradient-to-br from-philology-darkPurple to-philology-navy">
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-white/80 p-8">
+                  <Icon name="PlayCircle" size={64} className="text-philology-cyan mb-4" />
+                  <p className="text-center text-lg">
+                    Видео-презентация направления "Прикладная цифровая филология"
+                  </p>
+                  <p className="text-center text-sm mt-2 text-white/60">
+                    Здесь будет размещено видео о программе обучения
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
+            <Card className="bg-white/10 backdrop-blur-md border-philology-purple/30">
+              <CardHeader>
+                <Icon name="Users" className="text-philology-cyan mb-2" size={28} />
+                <CardTitle className="text-white text-lg">Студенческая жизнь</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-white/80 text-sm">
+                  Насыщенная студенческая жизнь, научные проекты и стажировки в ведущих IT-компаниях
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/10 backdrop-blur-md border-philology-purple/30">
+              <CardHeader>
+                <Icon name="Trophy" className="text-philology-cyan mb-2" size={28} />
+                <CardTitle className="text-white text-lg">Достижения</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-white/80 text-sm">
+                  Наши студенты — победители международных хакатонов и научных конференций
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/10 backdrop-blur-md border-philology-purple/30">
+              <CardHeader>
+                <Icon name="Briefcase" className="text-philology-cyan mb-2" size={28} />
+                <CardTitle className="text-white text-lg">Карьерные перспективы</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-white/80 text-sm">
+                  95% выпускников трудоустраиваются в первые 6 месяцев после окончания обучения
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacts" className="py-20 px-6 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl font-bold text-center text-white mb-4">Контакты</h2>
           <p className="text-center text-philology-cyan/80 mb-12 text-lg">
